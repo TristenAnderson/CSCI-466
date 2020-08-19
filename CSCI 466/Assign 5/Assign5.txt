@@ -1,0 +1,35 @@
+
+DROP TABLE IF EXISTS visits, dogs;
+CREATE TABLE dogs(dogID INTEGER PRIMARY KEY AUTO_INCREMENT,
+ breed CHAR(30),
+ name CHAR(30));
+
+INSERT INTO dogs(breed, name) VALUES ('labradoodle', 'Rusty');
+INSERT INTO dogs(breed, name) VALUES ('labradoodle', 'Cocoa');
+INSERT INTO dogs(breed, name) VALUES ('corgi', 'Skipper');
+INSERT INTO dogs(breed, name) VALUES ('husky', 'Shilo');
+INSERT INTO dogs(breed, name) VALUES ('german shepard', 'Emma');
+DESCRIBE dogs;
+SELECT * FROM dogs;
+
+CREATE TABLE visits(visitID INTEGER PRIMARY KEY AUTO_INCREMENT,
+ dogID INTEGER,
+ date DATE, FOREIGN KEY (dogID) REFERENCES dogs(dogID));
+
+INSERT INTO visits(dogID, date) VALUES ('1', '2019-10-10');
+INSERT INTO visits(dogID, date) VALUES ('2', '2019-10-10');
+INSERT INTO visits(dogID, date) VALUES ('3', '2019-10-10');
+INSERT INTO visits(dogID, date) VALUES ('4', '2019-10-10');
+INSERT INTO visits(dogID, date) VALUES ('5', '2019-10-10');
+INSERT INTO visits(dogID, date) VALUES ('1', '2019-10-11');
+INSERT INTO visits(dogID, date) VALUES ('2', '2019-10-15');
+INSERT INTO visits(dogID, date) VALUES ('3', '2019-10-20');
+DESCRIBE visits;
+SELECT * FROM visits;
+
+ALTER TABLE visits ADD (time TIME);
+
+UPDATE visits SET time = CURTIME();
+
+SELECT * FROM visits;
+

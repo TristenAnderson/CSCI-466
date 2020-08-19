@@ -1,0 +1,26 @@
+--Tristen Anderson
+--z1820036
+--Section 2
+
+USE BabyName;
+SHOW TABLES;
+DESCRIBE BabyName;
+
+SELECT DISTINCT year FROM BabyName WHERE name = 'Tristen' LIMIT 50;
+
+SELECT DISTINCT name FROM BabyName WHERE year = '1998' LIMIT 50;
+
+SELECT name, gender, count FROM BabyName WHERE year = '1998' ORDER BY count DESC LIMIT 50;
+
+SELECT *, SOUNDEX(name) FROM BabyName where SOUNDEX(name) = SOUNDEX('Tristen')
+ ORDER BY name, count, year LIMIT 50;
+
+SELECT COUNT(*) AS NumRows FROM BabyName;
+
+SELECT year, COUNT(name) FROM BabyName WHERE year = '1963';
+
+SELECT year, gender, COUNT(name) FROM BabyName WHERE year = '1953' GROUP BY gender;
+
+SELECT place, COUNT(DISTINCT name) FROM BabyName GROUP BY place;
+
+

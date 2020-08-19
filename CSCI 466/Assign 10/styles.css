@@ -1,0 +1,61 @@
+
+body {
+background-color: #222222;
+color: #ffffff;
+}
+
+p {
+	color: #ffffff;
+	font-family: courier;
+	font-size: 150%;
+}
+
+h1 {
+	color: #ffffff;
+	font-family: courier;
+}
+
+ol {
+	color: #ffffff;
+
+}
+
+td {
+	border: 1px white;
+	color: #ffffff;
+}
+
+table {
+	width: 50%;
+	border: 1px white;
+	border-color: #ffffff;
+	border-collapse: collapse;
+}
+
+div {
+	border: 2px solid white;
+	border-radius: 4px;
+	background-color: #555555;
+	padding: 10px;
+	margin: 10px;
+	width: 50%;
+}
+
+input[type=text], select {
+	width: 100%;
+	background-color: #ffffff;
+	display: inline-block;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: border-box;
+	border-radius: 4px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	border-radius: 4px;
+	padding: 14px 20px;
+	cursor: pointer;
+}

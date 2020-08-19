@@ -1,0 +1,19 @@
+DROP TABLE Suppliers, Parts, SP;
+
+CREATE TABLE Suppliers (sID INT PRIMARY KEY, sName varchar(64), status int, city varchar(64), FOREIGN KEY (sID) REFERENCES SP(sID));
+CREATE TABLE Parts (pID INT PRIMARY KEY, pName varchar(64), color varchar(64), weight INT);
+CREATE TABLE SP (pID INT, sID INT, qty INT,
+	 PRIMARY KEY(pID, sID),
+	 FOREIGN KEY (pID) REFERENCES P(pID),
+	FOREIGN KEY (sID) REFERENCES S(sID));
+
+INSERT INTO S VALUES 
+	();
+
+INSERT INTO P VALUES 
+	(1, 'nut', 'red', 12),
+	(2, 'bolt', 'green', 17),
+	(3, 'screw', 'blue', 17);
+
+INSERT INTO SP VALUES
+	();
